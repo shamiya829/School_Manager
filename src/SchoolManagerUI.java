@@ -13,3 +13,4 @@ public class SchoolManagerUI {
 
     frame.setVisible(true)
 }
+
