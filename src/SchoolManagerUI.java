@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.util.*;
 import  java.awt.*;
-import  javax.swing.*;
+
 
 
 public class SchoolManagerUI {
