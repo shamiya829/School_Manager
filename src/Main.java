@@ -15,6 +15,28 @@ public class Main {
                 "PRIMARY KEY(teacher_id)\n" +
                 ");\n");
 
+        stmt.execute("CREATE TABLE IF NOT EXISTS student(\n" +
+                "student_id INTEGER NOT NULL AUTO_INCREMENT,\n" +
+                "first_name TEXT NOT NULL,\n" +
+                "last_name TEXT NOT NULL,\n" +
+                "section TEXT, \n" +
+                "PRIMARY KEY(student_id)\n" +
+                ");\n");
+
+        stmt.execute("CREATE TABLE IF NOT EXISTS course(\n" +
+                "course_id INTEGER NOT NULL AUTO_INCREMENT,\n" +
+                "course_title TEXT NOT NULL,\n" +
+                "type INTEGER NOT NULL, \n" +
+                "PRIMARY KEY(course_id)\n" +
+                ");\n");
+
+        stmt.execute("CREATE TABLE IF NOT EXISTS section(\n" +
+                "id INTEGER NOT NULL AUTO_INCREMENT,\n" +
+                "course_id INTEGER NOT NULL,\n" +
+                "teacher_id INTEGER NOT NULL, \n" +
+                "PRIMARY KEY(id)\n" +
+                ");\n");
+
         stmt.execute("SHOW TABLES;");
         ResultSet rs = stmt.getResultSet();
 
