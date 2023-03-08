@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 public class SchoolManagerUI {
@@ -20,12 +21,42 @@ public class SchoolManagerUI {
         view.add("Course");
         view.add("Section");
 
+
+        String[] columns = new String[] {
+                "Id", "Name", "Hourly Rate", "Part Time"
+        };
+
+        Object[][] data = new Object[][] {
+                {1, "John", 40.0, false },
+                {2, "Rambo", 70.0, false },
+                {3, "Zorro", 60.0, true },
+                {1, "John", 40.0, false },
+                {2, "Rambo", 70.0, false },
+                {3, "Zorro", 60.0, true },
+                {1, "John", 40.0, false },
+                {2, "Rambo", 70.0, false },
+                {3, "Zorro", 60.0, true },
+                {1, "John", 40.0, false },
+                {2, "Rambo", 70.0, false },
+                {3, "Zorro", 60.0, true },
+                {1, "John", 40.0, false },
+                {2, "Rambo", 70.0, false },
+                {3, "Zorro", 60.0, true },
+                {1, "John", 40.0, false },
+                {2, "Rambo", 70.0, false },
+                {3, "Zorro", 60.0, true },
+        };
+        JTable table = new JTable(data, columns);
+        JScrollPane sp = new JScrollPane(table);
+        sp.setBounds(150,50,450,400);
+        f.add(sp);
         // action listeners
         exp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
             }
         });
+
 
         f.add(imp);
         f.add(exp);
