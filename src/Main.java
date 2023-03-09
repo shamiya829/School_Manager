@@ -38,6 +38,18 @@ public class Main {
                 ");\n");
 
         stmt.execute("SHOW TABLES;");
+
+        stmt.execute("INSERT INTO teacher (first_name, last_name) VALUES ('Jim', 'Smith');\n");
+        stmt.execute("INSERT INTO teacher (first_name, last_name) VALUES ('Phillip', 'Chin');\n");
+        stmt.execute("INSERT INTO teacher (first_name, last_name) VALUES ('Jackson', 'Wang');\n");
+
+
+        stmt.execute("INSERT INTO student (first_name, last_name) VALUES ('Bill', 'Smith');\n");
+        stmt.execute("INSERT INTO student (first_name, last_name) VALUES ('Will', 'Chin');\n");
+        stmt.execute("INSERT INTO student (first_name, last_name) VALUES ('Phil', 'Wang');\n");
+
+
+
         ResultSet rs = stmt.getResultSet();
 
         while(rs!=null && rs.next())
